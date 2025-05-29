@@ -37,8 +37,8 @@ damage share: This column refers to the percentage of total damage a champion de
 
 Our hypothesis is as follows:
 
- - Null : All characters perform the same regardless of how often they are banned 
- - Alt. : Characters that are banned more often do better than those that are banned less frequently
+ - H~0 : All characters perform the same regardless of how often they are banned 
+ - H~1 : Characters that are banned more often do better than those that are banned less frequently
 
 	The test statistic that was used was a linear regression analysis test, which produces a p-value corresponding to how likely it is that there is a correlation between ban-rate and win-rate. If there is no correlation, then we would expect an even spread of win-rates regardless of ban-rates, which would produce a very high p-value. Conversely, if there seems to be a pattern in the data that ban-rate. 
 	
