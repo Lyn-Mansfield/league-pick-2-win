@@ -27,6 +27,13 @@ damage share: This column refers to the percentage of total damage a champion de
 
 ## Data Cleaning and Exploratory Data Analysis
 
+The first thing one would notice when looking at the Oracle dataset is that it is enormous: not only did it have over 60,000 rows, but it also contained 135 columns, which is an overwhelming amount of information. We ended up splitting the dataset into two distinct datasets, as many of the laters rows simply gave in-game statistical information 5 minutes into games, then at the 10 minute mark, etc. Since we were more concerned with the outcome rather than the course of a game, we kept it separate so that our main dataset was more focused on our central question.
+
+Another key issue was that every element in the dataset was given as a string, even if they were meant to only contain numeric values. Cells that were supposedly missing values in fact contained empty strings instead. As such, we had to go column-by-column and cast them into their correct data-types, as well as correctly filling in any missing values with special values signifying as much, either np.nan for columns that could handle floating point numbers or -1 for integer columns.
+
+One tricky consideration was that many of the columns had boolean True/False values represented as either 1’s or 0’s. For example, in the ‘firstbloodkill’ column, players that had gotten the first kill of the game were given a corresponding 1 and everyone else was given a 0. All such columns were cast to boolean values except for the ‘result’ column in which each 1 was instead labelled as “Won” and each 0 labelled as “Lost”.
+
+![Cleaned Data DataFrame Head](.assets/cleaned_data_head.png)
 
 
 ## Assessment of Missingness
@@ -50,7 +57,7 @@ The test statistic that was used was a linear regression analysis test, which pr
 ></iframe>
 This model gives a p-value of 0.257, which is not very good. We can see from the graph that there is a lot of variance in win-rates for champions that are rarely banned. 
 
-![Hypothesis Pivot Table](assets/hypothesis_pt.png)
+![Hypothesis Pivot Table](.assets/hypothesis_pt.png)
 
 Upon investigating further, we can see that there are a lot of champions that rarely ever see play. We can see that since Heimerdinger has only been played once and lost that game, he has a 0\% win-rate! To remedy these outliers, let us focus on champions that are chosen at least 0.1\% of the time, which ends up shaving off roughly 40\% of all champions.
 
