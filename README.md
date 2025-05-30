@@ -40,7 +40,7 @@ Our hypothesis is as follows:
  - H<sub>0</sub> : All characters perform the same regardless of how often they are banned 
  - H<sub>1</sub> : Characters that are banned more often do better than those that are banned less frequently
 
-	The test statistic that was used was a linear regression analysis test, which produces a p-value corresponding to how likely it is that there is a correlation between ban-rate and win-rate. If there is no correlation, then we would expect an even spread of win-rates regardless of ban-rates, which would produce a very high p-value. Conversely, if there seems to be a pattern in the data that ban-rate. 
+The test statistic that was used was a linear regression analysis test, which produces a p-value corresponding to how likely it is that there is a correlation between ban-rate and win-rate. If there is no correlation, then we would expect an even spread of win-rates regardless of ban-rates, which would produce a very high p-value. Conversely, if there seems to be a pattern in the data that ban-rate. 
 	
 <iframe
   src="assets/hypothesis_test_first.html"
@@ -49,12 +49,20 @@ Our hypothesis is as follows:
   frameborder="0"
 ></iframe>
 
+This model gives a p-value of 0.257, which is not very good. We can see from the graph that there is a lot of variance in win-rates for champions that are rarely banned. 
+
+![Hypothesis Pivot Table](assets/hypothesis_pt.png)
+
+Upon investigating further, we can see that there are a lot of champions that rarely ever see play. We can see that since Heimerdinger has only been played once and lost that game, he has a 0\% win-rate! To remedy these outliers, let us focus on champions that are chosen at least 0.1\% of the time, which ends up shaving off roughly 40\% of all champions.
+
 <iframe
   src="assets/hypothesis_test_final.html"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
+
+This model gives a p-value of 0.024, which is much better. At an alpha-level of 0.05, we can safely conclude that, for champions that see widespread competitive play, there does appear to be a positive correlation between ban-rate and win-rate, which suggests that professional team are picking their bans based on the strength of a character, as expected.
 
 ## Framing a Prediction Problem
 
