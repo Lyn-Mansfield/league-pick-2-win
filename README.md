@@ -1,12 +1,8 @@
-# league-pick-2-win
+# League pick-2-win
 
-Hello all! First Commit!
+### An analysis of League of Legends pick-rates and win-rates, as seen in current competitive play
 
 ## Introduction
-
-
-
-## Data Cleaning and Exploratory Data Analysis
 
 League of Legends is one of the most famous multiplayer online battle arena games developed by Riot Games on October 27, 2009. With close to 120 million monthly active users and 40 million daily users worldwide, the game has become one of the most dominant and enduring games in the MOBA world. We will be working with a dataset developed by Oracle’s Elixir, which contains match data from professional League of Legends esports games played throughout 2025. It is filled with detailed statistics from real esports games, giving us insight into how players perform, how teams strategize, and the circumstances leading to defeat or victory.
 	
@@ -28,6 +24,10 @@ assists: This column gives us a quantity of the amount of times the player, or c
 earned gold: This column shows us the amount of gold a champion earned, which is earned by killing or assisting in killing enemy champions. Champions that have killed many enemies without dying are worth more gold. 
  - position: This column tells us the archetype of the champion that the player has chosen, can be Top, Jungle, Mid, Bot (ADC), and Support. 
 damage share: This column refers to the percentage of total damage a champion deals to enemy champions within a team fight or over the course of a game.
+
+## Data Cleaning and Exploratory Data Analysis
+
+
 
 ## Assessment of Missingness
 
