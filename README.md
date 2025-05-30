@@ -35,6 +35,8 @@ One tricky consideration was that many of the columns had boolean True/False val
 
 ### Univariate Analysis	
 ### Bivariate Analysis	
+<iframe src="assets/bivariate_1.html" width="800" height="600" frameborder="0" ></iframe>
+<iframe src="assets/bivariate_2.html" width="800" height="600" frameborder="0" ></iframe>
 ### Interesting Aggregates
 
 ![Cleaned Data DataFrame Head](/assets/cleaned_data_head.png)
