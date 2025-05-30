@@ -16,7 +16,7 @@ Ban phases in competitive video games add extra dimensions to gameplay, as you c
 	
 The central question we will be looking at is: What can champion bans and pick rates tell us about their competitive performance in League of Legends? This question aims to explore how the types of champions that are banned or picked—especially based on their archetypes—affect individual and team performance in professional League of Legends matches.
 	
-	The Oracle’s Elixir dataset provides an extensive number of columns, as well as 60180 rows that consist of a group of 10 rows, 5 for each team's players and then 2 afterwards of the team stats for each team. The columns most relevant to our central question are the following: 
+The Oracle’s Elixir dataset provides an extensive number of columns, as well as 60180 rows that consist of a group of 10 rows, 5 for each team's players and then 2 afterwards of the team stats for each team. The columns most relevant to our central question are the following: 
 - champion: A champion is a playable character that players control during the game. There are 170 champions with unique abilities, stats, and roles. 
  - ban1-5: These columns represent the champions that they picked to not be able to be used for the match, in chronological order. 
  - pick1-5: These columns represent the champions that they picked to play, which they are locked into playing for the duration of the match.
@@ -37,8 +37,8 @@ damage share: This column refers to the percentage of total damage a champion de
 
 Our hypothesis is as follows:
 
- - H~0~ : All characters perform the same regardless of how often they are banned 
- - H~1~ : Characters that are banned more often do better than those that are banned less frequently
+ - H<sub>0</sub> : All characters perform the same regardless of how often they are banned 
+ - H<sub>1</sub> : Characters that are banned more often do better than those that are banned less frequently
 
 	The test statistic that was used was a linear regression analysis test, which produces a p-value corresponding to how likely it is that there is a correlation between ban-rate and win-rate. If there is no correlation, then we would expect an even spread of win-rates regardless of ban-rates, which would produce a very high p-value. Conversely, if there seems to be a pattern in the data that ban-rate. 
 	
