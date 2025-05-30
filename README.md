@@ -33,7 +33,7 @@ Another key issue was that every element in the dataset was given as a string, e
 
 One tricky consideration was that many of the columns had boolean True/False values represented as either 1’s or 0’s. For example, in the ‘firstbloodkill’ column, players that had gotten the first kill of the game were given a corresponding 1 and everyone else was given a 0. All such columns were cast to boolean values except for the ‘result’ column in which each 1 was instead labelled as “Won” and each 0 labelled as “Lost”.
 
-![Cleaned Data DataFrame Head](.assets/cleaned_data_head.png)
+![Cleaned Data DataFrame Head](/assets/cleaned_data_head.png)
 
 Even after cleaning and removing extraneous columns, we were still left with 70 columns. However, here we can see both NaN and -1 values signifying missing data. 
 
@@ -58,7 +58,7 @@ The test statistic that was used was a linear regression analysis test, which pr
 ></iframe>
 This model gives a p-value of 0.257, which is not very good. We can see from the graph that there is a lot of variance in win-rates for champions that are rarely banned. 
 
-![Hypothesis Pivot Table](.assets/hypothesis_pt.png)
+![Hypothesis Pivot Table](/assets/hypothesis_pt.png)
 
 Upon investigating further, we can see that there are a lot of champions that rarely ever see play. We can see that since Heimerdinger has only been played once and lost that game, he has a 0\% win-rate! To remedy these outliers, let us focus on champions that are chosen at least 0.1\% of the time, which ends up shaving off roughly 40\% of all champions.
 
