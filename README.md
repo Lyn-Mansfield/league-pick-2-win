@@ -16,7 +16,7 @@ The Oracle’s Elixir dataset provides an extensive number of columns, as well a
 - champion: A champion is a playable character that players control during the game. There are 170 champions with unique abilities, stats, and roles. 
  - ban1-5: These columns represent the champions that they picked to not be able to be used for the match, in chronological order. 
  - pick1-5: These columns represent the champions that they picked to play, which they are locked into playing for the duration of the match.
-result: This column is either Won or Lost and represents whether or not the individual player or team won the match. 
+ - result: This column is either Won or Lost and represents whether or not the individual player or team won the match. 
  - kills: This column gives a quantity of the number of enemy champions the player, or collective team, defeated in the match. 
  - deaths: This column gives a quantity of the amount of times the enemy team defeats the players, or collective teams champions in a match. 
 assists: This column gives us a quantity of the amount of times the player, or collective team, contributed to defeating an enemy champion while not getting the kill themselves. 
