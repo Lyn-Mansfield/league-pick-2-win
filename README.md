@@ -35,6 +35,7 @@ One tricky consideration was that many of the columns had boolean True/False val
 
 ![Cleaned Data DataFrame Head](.assets/cleaned_data_head.png)
 
+Even after cleaning and removing extraneous columns, we were still left with 70 columns. However, here we can see both NaN and -1 values signifying missing data. 
 
 ## Assessment of Missingness
 
