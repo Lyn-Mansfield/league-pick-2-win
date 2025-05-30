@@ -33,15 +33,28 @@ Another key issue was that every element in the dataset was given as a string, e
 
 One tricky consideration was that many of the columns had boolean True/False values represented as either 1’s or 0’s. For example, in the ‘firstbloodkill’ column, players that had gotten the first kill of the game were given a corresponding 1 and everyone else was given a 0. All such columns were cast to boolean values except for the ‘result’ column in which each 1 was instead labelled as “Won” and each 0 labelled as “Lost”.
 
-### Univariate Analysis	
-### Bivariate Analysis	
-<iframe src="assets/bivariate_1.html" width="800" height="600" frameborder="0" ></iframe>
-<iframe src="assets/bivariate_2.html" width="800" height="600" frameborder="0" ></iframe>
-### Interesting Aggregates
-
 ![Cleaned Data DataFrame Head](/assets/cleaned_data_head.png)
 
 Even after cleaning and removing extraneous columns, we were still left with 70 columns. However, here we can see both NaN and -1 values signifying missing data. 
+
+### Univariate Analysis	
+### Bivariate Analysis	
+<iframe 
+	src="assets/bivariate_1.html" 
+	width="800" 
+	height="600" 
+	frameborder="0"
+	></iframe>
+ 
+<iframe 
+	src="assets/bivariate_2.html" 
+	width="800" 
+	height="600" 
+	frameborder="0" 
+	></iframe>
+
+
+### Interesting Aggregates
 
 ## Assessment of Missingness
 
