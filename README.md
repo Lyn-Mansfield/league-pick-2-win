@@ -82,10 +82,9 @@ The test statistic that was used was a linear regression analysis test, which pr
 	
 <iframe
   src="assets/hypothesis_test_first.html"
-  width="800"
-  height="600"
   frameborder="0"
 ></iframe>
+
 This model gives a p-value of 0.257, which is not very good. We can see from the graph that there is a lot of variance in win-rates for champions that are rarely banned. 
 
 ![Hypothesis Pivot Table](/assets/hypothesis_pt.png)
@@ -94,10 +93,9 @@ Upon investigating further, we can see that there are a lot of champions that ra
 
 <iframe
   src="assets/hypothesis_test_final.html"
-  width="800"
-  height="600"
   frameborder="0"
 ></iframe>
+
 This model gives a p-value of 0.024, which is much better. At an alpha-level of 0.05, we can safely conclude that, for champions that see widespread competitive play, there does appear to be a positive correlation between ban-rate and win-rate, which suggests that professional team are picking their bans based on the strength of a character, as expected.
 
 ## Framing a Prediction Problem
