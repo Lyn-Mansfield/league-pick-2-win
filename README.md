@@ -42,8 +42,8 @@ Even after cleaning and removing extraneous columns, we were still left with 70 
   
 <iframe 
   src="assets/bivariate_1.html" 
-  width="600"
-  height="400"
+  width="620"
+  height="420"
   frameborder="0"
 ></iframe>
  
@@ -51,8 +51,8 @@ Even after cleaning and removing extraneous columns, we were still left with 70 
  
 <iframe 
   src="assets/bivariate_2.html" 
-  width="600"
-  height="400"
+  width="620"
+  height="420"
   frameborder="0" 
 ></iframe>
 
@@ -81,8 +81,8 @@ The test statistic that was used was a linear regression analysis test, which pr
   
 <iframe
   src="assets/hypothesis_test_first.html"
-  width="600"
-  height="400"
+  width="620"
+  height="420"
   frameborder="0"
 ></iframe>
 
@@ -94,8 +94,8 @@ Upon investigating further, we can see that there are a lot of champions that ra
 
 <iframe
   src="assets/hypothesis_test_final.html"
-  width="600"
-  height="400"
+  width="620"
+  height="420"
   frameborder="0"
 ></iframe>
 
