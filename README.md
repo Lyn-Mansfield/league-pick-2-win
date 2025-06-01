@@ -44,15 +44,20 @@ Even after cleaning and removing extraneous columns, we were still left with 70 
 	width="800" 
 	height="600" 
 	frameborder="0"
-	></iframe>
+	style="display:block"
+></iframe>
+ 
+ Blah blah text!
  
 <iframe 
 	src="assets/bivariate_2.html" 
 	width="800" 
 	height="600" 
 	frameborder="0" 
-	></iframe>
+	style="display:block" 
+></iframe>
 
+Blah blah text!
 
 ### Interesting Aggregates
 
