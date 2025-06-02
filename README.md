@@ -197,9 +197,9 @@ This model gives a p-value of 0.024, which is much better. At an alpha-level of 
 
 ## Framing a Prediction Problem
 
-Now that we can see that win-rates are pretty strongly correlated to ban-rates, it seems safe to assume that the presence of certain champions have a dramatic effect on the outcome of a game. After all, some champions seem be a lot stronger than others, and many have higher than average win-rates. This begs the question: **how well can we predict whether a team will win or lose based on the champions that are picked?**
+Now that we can see that win-rates are pretty strongly correlated to ban-rates, it seems safe to assume that the presence of certain champions have a dramatic effect on the outcome of a game. After all, some champions seem be a lot stronger than others, and many have higher than average win-rates. This begs the question: **how well can we predict whether a team will win or lose based on other game statistics?**
 
-This of course ignores all that goes on during an actual match, and only focuses on the champions players pick at the beginning of the game. As such, our inputs will be the five champions that each team chooses, and the outputs will classify whether the model thinks those picks will lead to a win or a loss.
+To build off of our hypothesis testing, we will begin the predction with the champions players pick at the beginning of the game. As such, our inputs will be the five champions that each team chooses, and the outputs will classify whether the model thinks those picks will lead to a win or a loss. We do this to see if we can predict if a team will win or lose purely based off of the champions they choose, or must there be some skill and preformance taken into account. 
 
 ## Baseline Model
 
