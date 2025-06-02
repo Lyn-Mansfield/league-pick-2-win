@@ -37,11 +37,21 @@ One tricky consideration was that many of the columns had boolean True/False val
 
 Even after cleaning and removing extraneous columns, we were still left with 70 columns. However, here we can see both NaN and -1 values signifying missing data. 
 
-### Univariate Analysis  
+### Univariate Analysis
+
+<iframe 
+  src="assets/univariate_analysis.html" 
+  width="620"
+  height="420"
+  frameborder="0"
+></iframe>
+
+Here we can see that champions are not chosen very evenly. In fact, the most popular champions dominate, whereas a great many unpopular champions see nearly no play at all.
+
 ### Bivariate Analysis
   
 <iframe 
-  src="assets/bivariate_1.html" 
+  src="assets/missing.html" 
   width="620"
   height="420"
   frameborder="0"
@@ -50,7 +60,7 @@ Even after cleaning and removing extraneous columns, we were still left with 70 
  Blah blah text!
  
 <iframe 
-  src="assets/bivariate_2.html" 
+  src="assets/missing.html" 
   width="620"
   height="420"
   frameborder="0" 
@@ -59,6 +69,8 @@ Even after cleaning and removing extraneous columns, we were still left with 70 
 Blah blah text!
 
 ### Interesting Aggregates
+
+
 
 ## Assessment of Missingness
 
