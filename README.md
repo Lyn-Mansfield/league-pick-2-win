@@ -203,6 +203,10 @@ This of course ignores all that goes on during an actual match, and only focuses
 
 ## Baseline Model
 
+For our baseline model, we used the 5 categorical columns of the champions being picked by each team: pick1, pick2, pick3, pick4, pick5. For our classifier we used a Random Forest Classifier and transformed our categorical data with the one-hot encoder in order to represent these picks numerically making certain that every category is handled as a separate item without suggesting a connection between them. 
+
+After utilizing the cross_val_scores function and fitting the model to the training data, our accuracy score on the training data was 0.5077 meaning that our model can predict whether a team will win or lose 50.77% of the time. This accuracy score is not very good, basically meaning that our model is a coin toss of whether our prediction is correct or not. Though our baseline model is very niche, leaving lots of room for improvement. This could be through adding features that take into account the players actual performance, showing that the champion picks may not be the sole reason for why someone wins a game. Also, we will fine tune hyperparameters to make sure we are using the best parameters possible. 
+
 
 
 ## Final Model
