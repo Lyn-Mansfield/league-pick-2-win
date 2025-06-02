@@ -51,7 +51,7 @@ Here we can see that champions are not chosen very evenly. In fact, the most pop
 ### Bivariate Analysis
   
 <iframe 
-  src="assets/missing.html" 
+  src="assets/bivariate_1.html" 
   width="620"
   height="420"
   frameborder="0"
@@ -60,7 +60,7 @@ Here we can see that champions are not chosen very evenly. In fact, the most pop
  Blah blah text!
  
 <iframe 
-  src="assets/missing.html" 
+  src="assets/bivariate_2.html" 
   width="620"
   height="420"
   frameborder="0" 
