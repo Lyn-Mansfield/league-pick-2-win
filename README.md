@@ -66,13 +66,6 @@ Here we can see that losing teams tend to die much more on average than winning 
   frameborder="0" 
 ></iframe>
 
-<iframe 
-  src="assets/bivariate_3.html" 
-  width="620"
-  height="420"
-  frameborder="0" 
-></iframe>
-
 Here we can see how each position on the map varies in how much damaged is done and how much damage is mitigated there. This suggests that teams are more defense-oriented in jungle, whereas the mid and bot lanes sees a lot more actual combat. 
 
 ### Interesting Aggregates
