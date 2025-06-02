@@ -70,7 +70,44 @@ Blah blah text!
 
 ### Interesting Aggregates
 
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>firstblood</th>
+      <th>False</th>
+      <th>True</th>
+      <th>All</th>
+    </tr>
+    <tr>
+      <th>result</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Lost</th>
+      <td>2903</td>
+      <td>2121</td>
+      <td>5024</td>
+    </tr>
+    <tr>
+      <th>Won</th>
+      <td>2119</td>
+      <td>2895</td>
+      <td>5014</td>
+    </tr>
+    <tr>
+      <th>All</th>
+      <td>5022</td>
+      <td>5016</td>
+      <td>10038</td>
+    </tr>
+  </tbody>
+</table>
 
+Here we can see that teams that get the first kill of the game are much more likely to win, which suggests that gaining the advantage at the beginning of the game is important for victory.
 
 ## Assessment of Missingness
 
@@ -102,7 +139,7 @@ This model gives a p-value of 0.257, which is not very good. We can see from the
 
 ![Hypothesis Pivot Table](/assets/hypothesis_pt.png)
 
-Upon investigating further, we can see that there are a lot of champions that rarely ever see play. We can see that since Heimerdinger has only been played once and lost that game, he has a 0\% win-rate! To remedy these outliers, let us focus on champions that are chosen at least 0.1\% of the time, which ends up shaving off roughly 40\% of all champions.
+Upon investigating further, we can see that there are a lot of champions that rarely ever see play. We can see that since Heimerdinger has only been played once and lost that game, he has a 0% win-rate! To remedy these outliers, let us focus on champions that are chosen at least 0.1% of the time, which ends up shaving off roughly 40% of all champions.
 
 <iframe
   src="assets/hypothesis_test_final.html"
