@@ -57,7 +57,7 @@ Here we can see that champions are not chosen very evenly. In fact, the most pop
   frameborder="0"
 ></iframe>
  
- Blah blah text!
+Here we can see that losing teams tend to die much more on average than winning teams, which suggests that wins tend to be very one-sided rather than close matches.
  
 <iframe 
   src="assets/bivariate_2.html" 
@@ -65,8 +65,14 @@ Here we can see that champions are not chosen very evenly. In fact, the most pop
   height="420"
   frameborder="0" 
 ></iframe>
+<iframe 
+  src="assets/bivariate_3.html" 
+  width="620"
+  height="420"
+  frameborder="0" 
+></iframe>
 
-Blah blah text!
+Here we can see how each position on the map varies in how much damaged is done and how much damage is mitigated there. This suggests that teams are more defense-oriented in jungle, whereas the mid and bot lanes sees a lot more actual combat. 
 
 ### Interesting Aggregates
 
