@@ -50,6 +50,7 @@ Here we can see that champions are not chosen very evenly. In fact, the most pop
 
 ### Bivariate Analysis
   
+The first bivariate analysis we performed was on the deaths column and resulted in the dataset to see the difference in average deaths in the team that wins the game vs. lose.
 <iframe 
   src="assets/bivariate_1.html" 
   width="620"
@@ -58,15 +59,16 @@ Here we can see that champions are not chosen very evenly. In fact, the most pop
 ></iframe>
  
 Here we can see that losing teams tend to die much more on average than winning teams, which suggests that wins tend to be very one-sided rather than close matches.
- 
+
+The next bivariate analysis we performed was the average damage mitigated per minute between the 5 different position types. 
 <iframe 
   src="assets/bivariate_2.html" 
   width="620"
-  height="840"
+  height="420"
   frameborder="0" 
 ></iframe>
 
-Here we can see how each position on the map varies in how much damaged is done and how much damage is mitigated there. This suggests that teams are more defense-oriented in jungle, whereas the mid and bot lanes sees a lot more actual combat. 
+Here we can see how each position on the map varies in how much damage is done and how much damage is mitigated there. This suggests that teams are more defense-oriented in the jungle, whereas the mid and bot lanes see a lot more actual combat. 
 
 ### Interesting Aggregates
 
@@ -125,7 +127,7 @@ Alternative Hypothesis: The distribution of league differs depending on whether 
 
 Below are the observed distributions of the league column, split by whether teamid is missing or not.
 
-![Cleaned Data DataFrame Head](/assets/missing.png)
+![League Missingness Distribution](/assets/missing.png)
 
 After performing 1000 permutations of our test, the test statistic we found was around .812 and the p-value turned out to be 0.0. Below we see the plotly of the empirical distribution of our test statistic.
 
@@ -146,7 +148,7 @@ Null Hypothesis: The distribution of result is the same regardless of whether te
 Alternative Hypothesis: The distribution of result differs depending on whether teamid is missing.
 Below are the observed distributions of the result column, split by whether teamid is missing or not.
 
-![Cleaned Data DataFrame Head](/assets/missing_result.png)
+![Result Missingness Distribution](/assets/missing_result.png)
 
 After performing 1000 permutations of our test, the test statistic we found was around 0.014 and the p-value turned out to be 0.148. Below we see the plotly of the empirical distribution of our test statistic.
 
