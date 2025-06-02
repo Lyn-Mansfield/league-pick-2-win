@@ -107,7 +107,7 @@ Blah blah text!
   </tbody>
 </table>
 
-Here we can see that teams that get the first kill of the game are much more likely to win, which suggests that gaining the advantage at the beginning of the game is important for victory.
+This pivot table looks at team rows and sees how first blood relates to the result of the game. Here we can see that teams that get the first kill of the game are much more likely to win, which suggests that gaining the advantage at the beginning of the game is important for victory.
 
 ## Assessment of Missingness
 
@@ -152,7 +152,9 @@ This model gives a p-value of 0.024, which is much better. At an alpha-level of 
 
 ## Framing a Prediction Problem
 
+Now that we can see that win-rates are pretty strongly correlated to ban-rates, it seems safe to assume that the presence of certain champions have a dramatic effect on the outcome of a game. After all, some champions seem be a lot stronger than others, and many have higher than average win-rates. This begs the question: **how well can we predict whether a team will win or lose based on the champions that are picked?**
 
+This of course ignores all that goes on during an actual match, and only focuses on the champions players pick at the beginning of the game. As such, our inputs will be the five champions that each team chooses, and the outputs will classify whether the model thinks those picks will lead to a win or a loss.
 
 ## Baseline Model
 
