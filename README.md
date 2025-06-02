@@ -65,6 +65,7 @@ Here we can see that losing teams tend to die much more on average than winning 
   height="420"
   frameborder="0" 
 ></iframe>
+
 <iframe 
   src="assets/bivariate_3.html" 
   width="620"
