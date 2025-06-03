@@ -117,7 +117,7 @@ This pivot table looks at team rows and sees how first blood relates to the resu
 
 ### Missingness Dependency
 
-We are testing whether the missing values in the teamid column are related to other columns—in this case, league and result. We're using permutation tests with a significance level of 0.05 and Total Variation Distance (TVD) as our test statistic.
+We are testing whether the missing values in the teamid column are related to other columns—in this case, league and side. We're using permutation tests with a significance level of 0.05 and Total Variation Distance (TVD) as our test statistic.
 To start, we tested the relationship between teamid and league. The results indicate that the missingness in teamid does depend on the league column.
 Null Hypothesis: The distribution of league is the same regardless of whether teamid is missing.
 
@@ -140,15 +140,15 @@ After performing 1000 permutations of our test, the test statistic we found was 
 
 Based on our tests, we would reject the null hypothesis due to the fact that our p-value is below the 0.05 significance level we set. 
 
-Furthermore, we performed a second test to assess whether the missingness of teamid depends on the result as well. 
+Furthermore, we performed a second test to assess whether the missingness of teamid depends on the side as well. 
 
-Null Hypothesis: The distribution of result is the same regardless of whether teamid is missing.
+Null Hypothesis: The distribution of side is the same regardless of whether teamid is missing.
 
 
-Alternative Hypothesis: The distribution of result differs depending on whether teamid is missing.
-Below are the observed distributions of the result column, split by whether teamid is missing or not.
+Alternative Hypothesis: The distribution of side differs depending on whether teamid is missing.
+Below are the observed distributions of the side column, split by whether teamid is missing or not.
 
-![Result Missingness Distribution](/assets/missing_result.png)
+![Side Missingness Distribution](/assets/missing_result.png)
 
 After performing 1000 permutations of our test, the test statistic we found was around 0.014 and the p-value turned out to be 0.128. Below we see the plotly of the empirical distribution of our test statistic.
 
