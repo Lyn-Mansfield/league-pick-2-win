@@ -210,6 +210,11 @@ After utilizing the cross_val_scores function and fitting the model to the train
 
 
 ## Final Model
+For the final model we decided to add 2 quantitative features, kills and assists, to see if it is the fact that performance needs to be taken into account when predicting if a team will win or lose. When thinking about winning a MOBA style game, there are so many statistics that could come into account to help a team win or lose. Though repeatedly, the most common ones that people say directly contribute to a win are kills and assists. Because of this, we can assume that these 2 features will provide the lackluster base model with a boost in accuracy in predicting the outcome of League of Legends matches.  
+
+As it is what we used in the baseline model we will continue using a Random Forest Classifier for the final model. To transform our 2 new features we decided to use a StandardScaler Transformer on kills and a QuantileTransformer on assists. We used GridSearchCV to utilize the best_estimator and best_params features to find the hyperparameters. The hyperparameters we chose where max_depth, min samples split, and n estimators. For the max depth we tested None, 5, or 10. For minimum samples split we tested 2 and 5. For number of estimators, 5, 10, 25, 50, 100. After using grid search, it found that the best hyperparamters were 'classifier__max_depth': None, 'classifier__min_samples_split': 5, 'classifier__n_estimators': 100. 
+
+With these new features, the cross value accuracy score bumped up to 0.84396 which means that our model can predict whether a team will win or lose 84.4% of the time. This is a 33.63% increase from our baseline model, that is a large gap! With this increase, there is a very good chance for our model to correctly guess the outcome of a League of Legends match whereas before it was a coin flip. 
 
 
 
