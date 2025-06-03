@@ -150,7 +150,7 @@ Below are the observed distributions of the result column, split by whether team
 
 ![Result Missingness Distribution](/assets/missing_result.png)
 
-After performing 1000 permutations of our test, the test statistic we found was around 0.014 and the p-value turned out to be 0.148. Below we see the plotly of the empirical distribution of our test statistic.
+After performing 1000 permutations of our test, the test statistic we found was around 0.014 and the p-value turned out to be 0.128. Below we see the plotly of the empirical distribution of our test statistic.
 
 <iframe 
   src="assets/ED_result.html" 
