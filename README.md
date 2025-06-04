@@ -87,6 +87,7 @@ Here we can see how each position on the map varies in how much damage is done a
       <th>True</th>
       <th>All</th>
     </tr>
+  </thead>
   <tbody>
     <tr>
       <th>Lost</th>
