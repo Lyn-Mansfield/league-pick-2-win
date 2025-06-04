@@ -64,7 +64,7 @@ The next bivariate analysis we performed was the average damage mitigated per mi
 <iframe 
   src="assets/bivariate_2.html" 
   width="620"
-  height="420"
+  height="820"
   frameborder="0" 
 ></iframe>
 
