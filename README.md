@@ -1,3 +1,10 @@
+<style>
+  iframe {
+    display: block;
+    margin: 0 auto;
+  }
+</style>
+
 # League pick-2-win
 
 ### An analysis of <u>League of Legends</u> pick-rates and win-rates, as seen in current competitive play
