@@ -1,5 +1,5 @@
 <style>
-  iframe {
+  iframe, img {
     display: block;
     margin: 0 auto;
   }
