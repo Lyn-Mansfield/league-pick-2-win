@@ -116,6 +116,8 @@ This pivot table looks at team rows and sees how first blood relates to the resu
 
 ### NMAR Analysis
 
+Two rows in particular that would likely be NMAR are "monsterkillsownjungle" and "monsterkillsenemyjungle," as many of the rows that are labelled as complete actually do not have data for these columns in particular. This alongside the obscure nature of the data these columns are collecting seem to suggest that they are not missing due to any other factors, seeing as the missingness of these columns seemingly did not contribute to whether the person making the Oracle dataset considered that row to be complete or not.
+
 ### Missingness Dependency
 
 We are testing whether the missing values in the teamid column are related to other columns—in this case, league and side. We're using permutation tests with a significance level of 0.05 and Total Variation Distance (TVD) as our test statistic.
@@ -151,7 +153,7 @@ Below are the observed distributions of the side column, split by whether teamid
 
 ![Side Missingness Distribution](/assets/missing_result.png)
 
-After performing 1000 permutations of our test, the test statistic we found was around 0.014 and the p-value turned out to be 0.128. Below we see the plotly of the empirical distribution of our test statistic.
+After performing 1000 permutations of our test, the test statistic we found was around **0.014** and the p-value turned out to be **0.128**. Below we see the plotly of the empirical distribution of our test statistic.
 
 <iframe 
   src="assets/ED_result.html" 
@@ -161,9 +163,6 @@ After performing 1000 permutations of our test, the test statistic we found was 
 ></iframe>
 
 Based on our tests, we would fail to reject the null hypothesis due to the fact that our p-value is above the 0.05 significance level we set. 
-
-
-
 
 ## Hypothesis Testing
 
@@ -181,7 +180,7 @@ The test statistic that was used was a linear regression analysis test, which pr
   frameborder="0"
 ></iframe>
 
-This model gives a p-value of 0.257, which is not very good. We can see from the graph that there is a lot of variance in win-rates for champions that are rarely banned. 
+This model gives a p-value of **0.257**, which is not very good. We can see from the graph that there is a lot of variance in win-rates for champions that are rarely banned. 
 
 ![Hypothesis Pivot Table](/assets/hypothesis_pt.png)
 
@@ -194,7 +193,7 @@ Upon investigating further, we can see that there are a lot of champions that ra
   frameborder="0"
 ></iframe>
 
-This model gives a p-value of 0.024, which is much better. At an alpha-level of 0.05, we can safely conclude that, for champions that see widespread competitive play, there does appear to be a positive correlation between ban-rate and win-rate, which suggests that professional team are picking their bans based on the strength of a character, as expected.
+This model gives a p-value of **0.024**, which is much better. At an alpha-level of 0.05, we can safely conclude that, for champions that see widespread competitive play, there does appear to be a positive correlation between ban-rate and win-rate, which suggests that professional team are picking their bans based on the strength of a character, as expected.
 
 ## Framing a Prediction Problem
 
@@ -206,7 +205,7 @@ To build off of our hypothesis testing, we will begin the predction with the cha
 
 For our baseline model, we used the 5 categorical columns of the champions being picked by each team: pick1, pick2, pick3, pick4, pick5. For our classifier we used a Random Forest Classifier and transformed our categorical data with the one-hot encoder in order to represent these picks numerically making certain that every category is handled as a separate item without suggesting a connection between them. 
 
-After utilizing the cross_val_scores function and fitting the model to the training data, our accuracy score on the training data was 0.5077 meaning that our model can predict whether a team will win or lose 50.77% of the time. This accuracy score is not very good, basically meaning that our model is a coin toss of whether our prediction is correct or not. Though our baseline model is very niche, leaving lots of room for improvement. This could be through adding features that take into account the players actual performance, showing that the champion picks may not be the sole reason for why someone wins a game. Also, we will fine tune hyperparameters to make sure we are using the best parameters possible. 
+After utilizing the cross_val_scores function and fitting the model to the training data, our accuracy score on the training data was **0.5077 **meaning that our model can predict whether a team will win or lose 50.77% of the time. This accuracy score is not very good, basically meaning that our model is a coin toss of whether our prediction is correct or not. Though our baseline model is very niche, leaving lots of room for improvement. This could be through adding features that take into account the players actual performance, showing that the champion picks may not be the sole reason for why someone wins a game. Also, we will fine tune hyperparameters to make sure we are using the best parameters possible. 
 
 
 
@@ -215,8 +214,7 @@ For the final model we decided to add 2 quantitative features, kills and assists
 
 As it is what we used in the baseline model we will continue using a Random Forest Classifier for the final model. To transform our 2 new features we decided to use a StandardScaler Transformer on kills and a QuantileTransformer on assists. We used GridSearchCV to utilize the best_estimator and best_params features to find the hyperparameters. The hyperparameters we chose where max_depth, min samples split, and n estimators. For the max depth we tested None, 5, or 10. For minimum samples split we tested 2 and 5. For number of estimators, 5, 10, 25, 50, 100. After using grid search, it found that the best hyperparamters were 'classifier__max_depth': None, 'classifier__min_samples_split': 5, 'classifier__n_estimators': 100. 
 
-With these new features, the cross value accuracy score bumped up to 0.84396 which means that our model can predict whether a team will win or lose 84.4% of the time. This is a 33.63% increase from our baseline model, that is a large gap! With this increase, there is a very good chance for our model to correctly guess the outcome of a League of Legends match whereas before it was a coin flip. 
-
+With these new features, the cross value accuracy score bumped up to **0.84396** which means that our model can predict whether a team will win or lose 84.4% of the time. This is a 33.63% increase from our baseline model, that is a large gap! With this increase, there is a very good chance for our model to correctly guess the outcome of a League of Legends match whereas before it was a coin flip. 
 
 
 ## Fairness Analysis
@@ -231,6 +229,6 @@ Null Hypothesis: The model we created is fair. The accuracy for teams with less 
 
 Alternative Hypothesis: The model we created is not fair. The accuracy for teams with less than or equal to the median number of kills is significantly different than the accuracy for teams with greater than the median number of kills. 
 
-Our test statistic for this permutation test will be the absolute difference in average accuracy and the significance level will be set at 0.05. The resulting p-value of the permutation tests was 0.0, which is less than the 0.05 significance level that we set so we reject the null hypothesis. This outcome implies that our model predicts teams from both groups at a different accuracy, our model shows bias towards group X showing a significantly better accuracy than group Y. 
+Our test statistic for this permutation test will be the absolute difference in average accuracy and the significance level will be set at 0.05. The resulting p-value of the permutation tests was **0.0**, which is less than the 0.05 significance level that we set so we reject the null hypothesis. This outcome implies that our model predicts teams from both groups at a different accuracy, our model shows bias towards group X showing a significantly better accuracy than group Y. 
 
 
