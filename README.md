@@ -219,7 +219,7 @@ With these new features, the cross value accuracy score bumped up to **0.84396**
 
 ## Fairness Analysis
 
-For our fairness model, we are going to be answering the question “ Does my model preform different for teams that have less than or equal the median amount of kills compared to teams with greater than the median amount of kills. 
+For our fairness model, we are going to be answering the question: “Does my model preform different for teams that have less than or equal the median amount of kills compared to teams with greater than the median amount of kills?"
 
 Group X in our model is the teams with less than or equal to the median number of kills in the dataset. Group Y in the teams with strictly greater than the median number of kills in the dataset. 
 
