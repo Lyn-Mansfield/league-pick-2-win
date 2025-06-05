@@ -221,4 +221,16 @@ With these new features, the cross value accuracy score bumped up to 0.84396 whi
 
 ## Fairness Analysis
 
+For our fairness model, we are going to be answering the question “ Does my model preform different for teams that have less than or equal the median amount of kills compared to teams with greater than the median amount of kills. 
+
+Group X in our model is the teams with less than or equal to the median number of kills in the dataset. Group Y in the teams with greater than or equal to the median number of kills in the dataset. 
+
+Hypothesis:
+
+Null Hypothesis: The model we created is fair. The accuracy for teams with less than or equal to the median number of kills is the same as the accuracy for teams with greater than the median number of kills. 
+
+Alternative Hypothesis: The model we created is not fair. The accuracy for teams with less than or equal to the median number of kills is significantly different than the accuracy for teams with greater than the median number of kills. 
+
+Our test statistic for this permutation test will be the absolute difference in average accuracy and the significance level will be set at 0.05. The resulting p-value of the permutation tests was 0.0, which is less than the 0.05 significance level that we set so we reject the null hypothesis. This outcome implies that our model predicts teams from both groups at a different accuracy, our model shows bias towards group X showing a significantly better accuracy than group Y. 
+
 
